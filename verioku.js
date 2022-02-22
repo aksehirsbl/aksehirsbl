@@ -1,4 +1,4 @@
-var xmlFile="xml/veriler_20220211.xml";
+var xmlFile="xml/veriler12.xml";
 
 var httpObj = new XMLHttpRequest();
 httpObj.open("GET",xmlFile,false);
