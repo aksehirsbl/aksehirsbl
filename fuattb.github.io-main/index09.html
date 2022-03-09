@@ -1,0 +1,62 @@
+﻿<html>
+<head><title>AkşehirSBL 2021-2022 Analiz</title>
+<script src="js/chart.js"></script>
+<script src="js/chartjs-plugin-datalabels.js"></script>
+<script src="js09/verioku09.js"></script>
+<script src="js/goster.js"></script>
+<style>
+td button{
+	background-color: #4CAF50;border: none;color: white;padding: 10px 15px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;
+}
+button{
+	background-color:#4C50AF;border: none;color: white;padding:10px 15px;text-align:center;
+	text-decoration:none;display:inline-block;font-size:16px;
+}
+table{
+	margin-top:-7px; margin-bottom:-7px;
+}
+
+</style>
+<body>
+<div id="listediv"><table><tr><td id="liste"></td>
+<td><button onclick="bilgi(xmlEl,162);" style="display:none;">Göster</button>
+<button onclick="selectNext('DropDownList1',-1);">Geri</button>
+</td>
+<td><button onclick="window.location.reload(true);" style="display:none;">Tazele</button>
+<button onclick="selectNext('DropDownList1',1);">İleri</button>
+</td>
+</tr>
+<!--<tr>
+<td align="center"></td>
+<td  align="center" colspan="2"></td>
+</tr>--></table></div>
+<script src="js09/listeyukle09.js"></script>
+<br/>
+<div id="bilgi1"></div>
+<br/>
+<button onclick="divggostergizle('mc1')">Türkçe-Sosyal-Matematik-Fen Netleri Grafiği</button>
+<div id="mc1" class="chart-container" style="position: relative; height:450; width:450; align:left; border:1px solid black;display:none;">
+<canvas id="myChart1" width="450" height="450"></canvas>
+</div>
+<div style="position: relative; height:10; width:10; align:left;"></div>
+<button onclick="divggostergizle('mc2')">Toplam Netler Grafiği</button>
+<div id="mc2" class="chart-container" style="position: relative; height:450; width:450; align:left; border:1px solid black;display:none;">
+<canvas id="myChart2" width="450" height="450"></canvas>
+</div>
+<div style="position: relative; height:10; width:10; align:left;"></div>
+<button onclick="divggostergizle('mc3')">Sınavlardan Alınan Puanlar Grafiği</button>
+<div id="mc3" class="chart-container" style="position: relative; height:450; width:450; align:left; border:1px solid black;display:none;">
+<canvas id="myChart3" width="450" height="450"></canvas>
+</div>
+
+<div id="dgraf1">
+</div>
+<div id="dgraf2">
+</div>
+<div id="dgraf3">
+</div>
+<script>bilgi(xmlEl,162);</script>
+<a href="index.html">Anasayfaya Dön</a>
+</body>
+</html>
