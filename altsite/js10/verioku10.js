@@ -1,4 +1,4 @@
-var xmlFile="../xml/veriler10.xml";
+var xmlFile="../altsite/xml/veriler10.xml";
 
 var httpObj = new XMLHttpRequest();
 httpObj.open("GET",xmlFile,false);
