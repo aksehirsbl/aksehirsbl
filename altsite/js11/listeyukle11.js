@@ -5,7 +5,7 @@ function selectNext(selid,c){
 	select.dispatchEvent(new Event('change'));
 }
 
-var xmlFile="../xml/veriler11.xml";
+var xmlFile="../altsite/xml/veriler11.xml";
 
 var httpObj = new XMLHttpRequest();
 httpObj.open("GET",xmlFile,false);
