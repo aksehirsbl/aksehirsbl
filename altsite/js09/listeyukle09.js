@@ -28,7 +28,6 @@ for(var i = 0;i<=ogrSayi*sSayi;i+=sSayi)
 }
 catch(e){
 	console.log("HATA",e);
-	break;
 }
 newSelect.setAttribute("style","background-color:#AF4C50;border:none;color:white;padding:10px 0px;text-align:left;text-decoration:none;display:inline-block;font-size:16px;");
 newSelect.setAttribute("onchange","bilgi(xmlEl,ogrSayi,sSayi);");
