@@ -1,4 +1,4 @@
-var ogrSayi=93;
+var ogrSayi=92;
 var sSayi=35;
 function selectNext(selid,c){
 	var select = document.getElementById(selid);
