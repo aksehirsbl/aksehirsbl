@@ -62,9 +62,9 @@ function sinifSec(sinifD,noG,sifG,girDur)
 	if(girkor==false)
 	{
 		alert("Bilgiler Hatalı");
-		alert(a1+"-"+b1+"-"+c1);
-		alert(k1+"-"+k2+"-"+k3);
-		alert(sinifD+"-"+noG+"-"+sifG);
+		//alert(a1+"-"+b1+"-"+c1);
+		//alert(k1+"-"+k2+"-"+k3);
+		//alert(sinifD+"-"+noG+"-"+sifG);
 		girDur=0;
 	}
 	else if(girkor==true)
