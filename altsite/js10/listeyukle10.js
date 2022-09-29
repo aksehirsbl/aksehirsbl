@@ -1,4 +1,4 @@
-var ogrSayi=153;
+var ogrSayi=500;
 var sSayi=35;
 function selectNext(selid,c){
 	var select = document.getElementById(selid);
@@ -15,6 +15,7 @@ var xmlDocument = httpObj.responseXML;
 var xmlEl1 = xmlDocument.getElementsByTagName("row");
 var newSelect=document.createElement("select");
 newSelect.setAttribute("id","DropDownList1");
+try{
 for(var i = 0;i<=ogrSayi*sSayi;i+=sSayi)
 {
 	var opt = document.createElement("option");
@@ -23,6 +24,11 @@ for(var i = 0;i<=ogrSayi*sSayi;i+=sSayi)
 	opt.innerHTML += xmlEl1[i].childNodes[1].childNodes[0].nodeValue+"--";
 	opt.innerHTML += xmlEl1[i].childNodes[3].childNodes[0].nodeValue;
 	newSelect.appendChild(opt);
+}
+}
+catch(e){
+	console.log("HATA",e);
+	break;
 }
 newSelect.setAttribute("style","background-color:#AF4C50;border:none;color:white;padding:10px 0px;text-align:left;text-decoration:none;display:inline-block;font-size:16px;");
 newSelect.setAttribute("onchange","bilgi(xmlEl,ogrSayi,sSayi);");

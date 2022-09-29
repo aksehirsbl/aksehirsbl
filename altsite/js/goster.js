@@ -51,6 +51,7 @@ function bilgi(xml_verioku,kayit,iKayit)
 		{
 			adSoyad=xml_verioku[i].childNodes[3].childNodes[0].nodeValue;
 			sinif=xml_verioku[i].childNodes[2].childNodes[0].nodeValue;
+			try{
 			for(var j=i;j<=i+iKayit-1;j++)
 			{
 				puan=xml_verioku[j].childNodes[21].childNodes[0].nodeValue;
@@ -76,6 +77,11 @@ function bilgi(xml_verioku,kayit,iKayit)
 					topN.push(parseFloat(ton));
 					sonSinav=xml_verioku[j].childNodes[4].childNodes[0].nodeValue;
 				}
+			}
+			}
+			catch(e){
+				console.log("HATA",e);
+				break;
 			}
 		}
 	}
