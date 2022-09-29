@@ -1,0 +1,87 @@
+﻿<html>
+<head><title>AkşehirSBL 2021-2022 Analiz</title>
+<script src="../js/chart.js"></script>
+<script src="../js/chartjs-plugin-datalabels.js"></script>
+<script src="../js/ogrgoster.js"></script>
+<script src="../js/ogrverioku.js"></script>
+<script>
+var globalogrno;
+var globalogrsayi;
+var globalsinavsayi;
+globalogrno=0;
+globalogrsayi=0;
+globalsinavsayi=0;
+var globalgirDur;
+</script>
+
+<style>
+td button,#giris{
+	background-color: #4CAF50;border: none;color: white;padding: 10px 15px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;
+}
+button{
+	background-color:#4C50AF;border: none;color: white;padding:10px 15px;text-align:center;
+	text-decoration:none;display:inline-block;font-size:16px;
+}
+table{
+	margin-top:-7px; margin-bottom:-7px;
+}
+#sinif_sec{
+	background-color:#AF4C50;border:none;color:white;padding:10px 0px; text-align:left;text-decoration:none;display:inline-block;font-size:16px;
+}
+#ogngir,#sifgir{
+	background-color: #EEEEEE;border: none;color: blue;padding: 10px 15px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;
+}
+</style>
+<body>
+<div id="listediv"><table><tr>
+<td>Sınıf:<select id="sinif_sec">
+<option>12</option><option>11</option><option>10</option><option>09</option></select></td>
+<td>No:<input type="text" id="ogngir"/></td>
+<td>Şifre:<input type="password" id="sifgir"/></td>
+<td><input type="button" id="giris" value="Giriş" onclick="sinifSec(document.getElementById('sinif_sec').value,ogngir.value,sifgir.value,globalgirDur);/*alert(globalgirDur);if(globalgirDur==1){bilgi(xmlEl,500,35);}*/;"/></td>
+<!--
+<td id="liste"></td>
+<td><button onclick="bilgi(xmlEl);" style="display:none;">Göster</button>
+<button onclick="selectNext('DropDownList1',-1);">Geri</button>
+</td>
+<td><button onclick="window.location.reload(true);" style="display:none;">Tazele</button>
+<button onclick="selectNext('DropDownList1',1);">İleri</button>
+</td>-->
+</tr>
+<!--<tr>
+<td align="center"></td>
+<td  align="center" colspan="2"></td>
+</tr>--></table></div>
+<script src="../js/ogrlisteyukle.js"></script>
+<br/>
+<div id="bilgi1"></div>
+<br/>
+<button onclick="divggostergizle('mc1')">Türkçe-Sosyal-Matematik-Fen Netleri Grafiği</button>
+<div id="mc1" class="chart-container" style="position: relative; height:450; width:450; align:left; border:1px solid black;display:none;">
+<canvas id="myChart1" width="450" height="450"></canvas>
+</div>
+<div style="position: relative; height:10; width:10; align:left;"></div>
+<button onclick="divggostergizle('mc2')">Toplam Netler Grafiği</button>
+<div id="mc2" class="chart-container" style="position: relative; height:450; width:450; align:left; border:1px solid black;display:none;">
+<canvas id="myChart2" width="450" height="450"></canvas>
+</div>
+<div style="position: relative; height:10; width:10; align:left;"></div>
+<button onclick="divggostergizle('mc3')">Sınavlardan Alınan Puanlar Grafiği</button>
+<div id="mc3" class="chart-container" style="position: relative; height:450; width:450; align:left; border:1px solid black;display:none;">
+<canvas id="myChart3" width="450" height="450"></canvas>
+</div>
+
+<div id="dgraf1">
+</div>
+<div id="dgraf2">
+</div>
+<div id="dgraf3">
+</div>
+<script>//bilgi(xmlEl);</script>
+<!--
+	<a href="altsite/index.html">Diğer Sınıflar</a>	
+-->
+</body>
+</html>
